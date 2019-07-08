@@ -1,0 +1,25 @@
+{% extends 'music/header.html' %}
+
+{% block title %}PythonDjandoDemo: Album - {{ album.title }} by {{ album.artist }}{% endblock %}
+{% load staticfiles %}
+
+{% block body %}
+
+    {#body start#}
+{#    <img src="{% static 'music/images/' %}{{ album.logo }}" alt="{{ album.logo }}">#}
+    <img src="{{ album.logo.url }}" alt="{{ album.logo }}">
+
+    <h1>{{ album.title }}</h1>
+    <h2>{{ album.artist }}</h2>
+
+    {% for song in album.song_set.all %}
+        {{ song.title }}
+        {% if song.is_favorite %}
+            <img src="http://i.imgur.com/b9b13Rd.png"/>
+        {% endif %}
+        <br>
+    {% endfor %}
+
+    {#body close#}
+
+{% endblock %}
