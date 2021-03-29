@@ -21,7 +21,7 @@ Markdown==3.1.1
 oauthlib==3.0.1
 pipenv==2018.11.26
 psycopg2==2.8.3
-Pygments==2.4.2
+Pygments==2.7.4
 PyJWT==1.7.1
 python3-openid==3.1.0
 pytz==2019.1
